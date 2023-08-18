@@ -6,21 +6,22 @@ def convert_time(hour, minutes, period):
     if (hour < 1 or hour > 12) or (minutes < 0 or minutes > 59) or (period != "am" and period != "pm"): 
         print("enter valid time")  
     else:
+        if minutes < 10:
+            minute_str = "0" + minute_str
+            
         if period == 'am' and hour == 12:
             hour = 0
             hour_str = "00"
-            print(f"time is {hour_str}:{minutes}:{period}")
+            print(f"time is {hour_str}{minute_str}")
+        elif period == "am" and hour < 10:
+            hour_str = "0" + hour_str
+            print(f"time is {hour_str}{minute_str}")
+        elif period == "am" and hour > 9:
+            print(f"time is {hour}{minute_str}")
         elif period == 'pm' and hour != 12:
             hour += 12
-            print(f"time is {hour}:{minutes}:{period}")
+            print(f"time is {hour}{minute_str}")
         elif period == 'pm' and hour == 12:
             hour = 12
-            print(f"time is {hour}:{minutes}:{period}")   
-        elif len(minute_str) != 2:
-            minute_str = "0" + minute_str
-            print(minute_str)
-            print(f"time is {hour}:{minute_str}:{period}") 
-
-                     
-    
-convert_time(1, 0, "pm")
+            print(f"time is {hour}{minute_str}")  
+convert_time(12, 15, "pm")            
