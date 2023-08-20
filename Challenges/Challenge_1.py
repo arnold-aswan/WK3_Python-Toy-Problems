@@ -4,7 +4,12 @@ def convert_time(hour, minutes, period):
     hour_str = str(hour)
     minute_str = str(minutes)
     if (hour < 1 or hour > 12) or (minutes < 0 or minutes > 59) or (period != "am" and period != "pm"): 
-        print("enter valid time")  
+        print(""""
+              enter valid time
+              Hours : 1 -12
+              Minutes: 0 - 59
+              Period: am/pm only
+              """)  
     else:
         if minutes < 10:
             minute_str = "0" + minute_str
@@ -24,4 +29,4 @@ def convert_time(hour, minutes, period):
         elif period == 'pm' and hour == 12:
             hour = 12
             print(f"time is {hour}{minute_str}")  
-convert_time(12, 15, "pm")            
+convert_time(10, 15, "am")            
