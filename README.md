@@ -55,10 +55,9 @@ Make sue you have the following installed first
 2. Navigate to Challenges directory
    `cd Challenges`
 3. Open the `Challenges` directory with your desired IDE, i.e `visual studio code`
-4.
 
 # Author & License
 
-Author: [Arnold ASwani] (https://github.com/arnold-aswan)
+Author: [Arnold Aswani](https://github.com/arnold-aswan)
 
 Licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
